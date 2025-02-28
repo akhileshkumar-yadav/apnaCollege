@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- action attribute to define form data redirect location -->
+    <form action="server">
+        <input type="text" placeholder="First input ">
+        <br>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="full name">
+        <br>
+        <label for="password">password</label>
+        <input type="password" id="password">
+        <br>
+        <label for="time">time</label>
+        <input type="time" id="time" >
+        <br>
+        <label for="date">date</label>
+        <input type="date" id="date">
+        <br>
+        <!-- three type of button attribute 1.submit , 2.button , 3.reset -->
+         <!-- by default button ka type submit hi hota hai -->
+        <button type="submit">Submit</button>
+        <button type="button">button</button>
+        <button type="reset">reset</button>
+        <br>
+        <input type="submit" value="submit">
+        <br>
+        <input type="button" value="button">
+         <br>
+        
+
+    </form>
+    <br>
+    <form action="https://www.youtube.com/results">
+        <input type="text" placeholder="search" name="search_query">
+        <button>search</button>
+    </form>
+    <br>
+    <form action="https://www.google.com/search">
+        <input type="text" placeholder="search on google" name="q">
+        <button>search</button>
+    </form>
+    <br>
+    <form action="/server">
+        <input type="checkbox" id="checkbox" name="checkbox" value="hindi">
+        <label for="checkbox">Hindi</label>`
+        <input type="checkbox" id="checkbox2" name="checkbox2" value="english">
+        <label for="checkbox2">English</label>`
+        <button>submit</button>
+    </form>
+    <br>
+    <!-- radio me only one input select & multiple box rahega but id diff name same rhega name input value ko key value pair me store karta hai action use redirect karta hai  -->
+    <form action="/server">
+    <input type="radio" id="radio" name="radio" value="true">
+    <label for="radio">true</label>
+    <input type="radio" id="radio2" name="radio" value="false">
+    <label for="radio2">false</label>
+    <button>submit</button>
+    </form>
+    <!-- dropdown  -->
+     <form action="/server">
+        <h1>Dropdown</h1>
+        <select name="profession" id="profession">
+            <option >select your pro</option>
+            <option  value="stu">student</option>
+            <option selected value="dev">developer</option>
+        </select>
+        <button>submit</button>
+     </form>
+     <br>
+     <!-- volume(range)  -->
+      <form action="/server">
+        select volume
+        <label for="vol">volume</label>
+        <input type="range" id="vol" name="vol" value="50" min="0" max="100" step="10" />
+        <button>submit</button>
+      </form>
+      <br>
+      <!-- textarea -->
+       <form action="/server">
+        <label for="textarea">textarea</label>
+        <textarea name="textarea" id="textarea" placeholder="Please give me feedback"></textarea>
+        <button>submit</button>
+       </form>
+</body>
+</html>

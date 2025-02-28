@@ -1,0 +1,39 @@
+.container{
+    width: 400px;
+    height: 100px;
+    background-color: antiquewhite;
+    animation:anima 1s ease-in 0s infinite normal ;
+    /* border-top: 5px dotted red; */
+}
+
+@keyframes anima{
+    from{
+         background-color: #000;
+         width: 50px;
+    }
+    to{
+        background-color: aqua;
+        width: 400px;
+    }
+}
+
+.border{
+    border-top: 5px dotted red;
+    margin-top: 50px;
+    width: 50%;
+    animation: border 10s ease-in 0s infinite normal;
+}
+
+@keyframes border {
+    from{
+        border-top: 5px dashed red;
+        width: 0%;
+        /* transform: translateX(0px); */
+    }
+    to{
+        border-top: 5px dashed rgb(20, 176, 25);
+        /* transform: translateX(500px); */
+        width: 50%;
+    }
+}
+

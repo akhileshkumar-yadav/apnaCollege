@@ -1,0 +1,68 @@
+.container{
+    height: 70vh;
+    width: 100%;
+    background-color: #8e8d8d;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+
+#box-1{
+    background-color: #d5cf19;
+    grid-area: 1/span 3;
+}
+#box-2{
+    background-color: #19d587;
+    grid-area: 2/span 2;
+}
+#box-3{
+    background-color: #19c5d5;
+    grid-row: 2/4;
+}
+#box-4{
+    background-color: #d519bc;
+}
+#box-5{
+    background-color: #d51919;
+}
+#box-6{
+    background-color: #93d519;
+    grid-area: 4/span 3;
+}
+
+@media ((min-width:400px) and (max-width:800px)){
+    .container{
+        height: 70vh;
+        width: 100%;
+        background-color: #8e8d8d;
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+    #box-1{
+        background-color: #d5cf19;
+        grid-area: 1/span 3;
+    }
+    #box-2{
+        background-color: #19d587;
+        grid-area: 2/span 3;
+    }
+    #box-3{
+        background-color: #19c5d5;
+        /* grid-row: 3/3;
+         */
+         grid-area: 3/span 3;
+    }
+    #box-4{
+        background-color: #d519bc;
+        grid-area: 4/span 3;
+    }
+    #box-5{
+        background-color: #d51919;
+        grid-area: 5/span 3;
+    }
+    #box-6{
+        background-color: #93d519;
+        grid-area: 6/span 3;
+    }
+}
