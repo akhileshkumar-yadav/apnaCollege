@@ -1,0 +1,62 @@
+.input-container {
+    position: relative;
+    width: 250px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid gray;
+    outline: none;
+}
+
+/* Default position for the label */
+.head {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: gray;
+    background-color: white;
+    padding: 2px 5px;
+}
+
+/* Keyframes animation */
+@keyframes moveUp {
+    from {
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: gray;
+    }
+    to {
+        top: -10px;
+        font-size: 12px;
+        color: blue;
+    }
+}
+
+@keyframes moveDown {
+    from {
+        top: -10px;
+        font-size: 12px;
+        color: blue;
+    }
+    to {
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: gray;
+    }
+}
+
+/* Class to trigger animation */
+.move-up {
+    animation: moveUp 0.3s forwards;
+}
+
+.move-down {
+    animation: moveDown 0.3s forwards;
+}

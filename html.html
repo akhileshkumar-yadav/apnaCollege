@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Skill Progress</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .skill-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill {
+            margin-bottom: 20px;
+        }
+
+        .skill-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0; /* Initially 0 for animation */
+            border-radius: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: width 2s ease-in-out;
+        }
+
+        .html .progress-fill { background: #E34F26; } /* HTML - Red */
+        .css .progress-fill { background: #1572B6; } /* CSS - Blue */
+        .js .progress-fill { background: #F7DF1E; } /* JS - Yellow */
+    </style>
+</head>
+<body>
+
+    <div class="skill-container">
+        <div class="skill html">
+            <div class="skill-name">HTML</div>
+            <div class="progress-bar">
+                <div class="progress-fill" data-width="90%"></div>
+            </div>
+        </div>
+
+        <div class="skill css">
+            <div class="skill-name">CSS</div>
+            <div class="progress-bar">
+                <div class="progress-fill" data-width="85%"></div>
+            </div>
+        </div>
+
+        <div class="skill js">
+            <div class="skill-name">JavaScript</div>
+            <div class="progress-bar">
+                <div class="progress-fill" data-width="75%"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const progressBars = document.querySelectorAll(".progress-fill");
+            progressBars.forEach(bar => {
+                const width = bar.getAttribute("data-width");
+                bar.style.width = width; // Animate width from 0 to given %
+            });
+        });
+    </script>
+
+</body>
+</html>
